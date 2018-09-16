@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build": "ng build --prod && ng run ssrLab:server",
+    "server": "node api-node/app.server.js"
   },
   "private": true,
   "dependencies": {
@@ -19,8 +20,11 @@
     "@angular/http": "^6.1.0",
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
+    "@angular/platform-server": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@nguniversal/express-engine": "^6.1.0",
     "core-js": "^2.5.4",
+    "express": "^4.16.3",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },
